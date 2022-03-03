@@ -1,16 +1,29 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+    font-family: 'Poppins', sans-serif;
+   
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+body{
+    @apply !box-border  bg-gray-50 }
+
+.formInput{
+  @apply  border-2 p-1 placeholder:capitalize mt-2 w-full  transition-all outline-none duration-300 focus:ring-2 focus:ring-blue-500 rounded-sm invalid:border-pink-500 invalid:text-pink-600
 }
 
-* {
-  box-sizing: border-box;
+.blurInput{
+    @apply absolute inset-1 blur-xl bg-gradient-to-tr from-purple-700 to-violet-600  
+}
+
+.PhoneInputInput{
+    @apply  outline-none
+}
+.PhoneInput{
+    @apply  transition-all duration-300 focus:ring-2 focus:ring-blue-500 
 }
